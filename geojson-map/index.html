@@ -1,0 +1,199 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Black Cultural Institutions — Pittsburgh & Buffalo</title>
+
+  <!-- Leaflet. The inline fallback CSS below fixes the "wonky tile" issue if CDN CSS is blocked/late. -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.4/dist/leaflet.js"></script>
+
+  <style>
+    /* Leaflet layout safety net: keeps tiles, panes, controls, popups, and SVG overlays positioned correctly. */
+    .leaflet-container { overflow:hidden; touch-action:pan-x pan-y; font:12px/1.5 "Helvetica Neue",Arial,Helvetica,sans-serif; background:#ddd; outline-offset:1px; }
+    .leaflet-pane,.leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow,.leaflet-tile-container,.leaflet-pane>svg,.leaflet-pane>canvas,.leaflet-zoom-box,.leaflet-image-layer,.leaflet-layer { position:absolute; left:0; top:0; }
+    .leaflet-container { -webkit-tap-highlight-color:transparent; }
+    .leaflet-tile,.leaflet-marker-icon,.leaflet-marker-shadow { user-select:none; -webkit-user-select:none; -moz-user-select:none; -webkit-user-drag:none; }
+    .leaflet-tile::selection { background:transparent; }
+    .leaflet-container img { max-width:none !important; max-height:none !important; }
+    .leaflet-container .leaflet-overlay-pane svg { max-width:none !important; max-height:none !important; }
+    .leaflet-zoom-animated { transform-origin:0 0; }
+    .leaflet-marker-icon,.leaflet-marker-shadow { display:block; }
+    .leaflet-control { position:relative; z-index:800; pointer-events:auto; float:left; clear:both; }
+    .leaflet-top,.leaflet-bottom { position:absolute; z-index:1000; pointer-events:none; }
+    .leaflet-top { top:0; } .leaflet-right { right:0; } .leaflet-bottom { bottom:0; } .leaflet-left { left:0; }
+    .leaflet-right .leaflet-control { float:right; } .leaflet-top .leaflet-control { margin-top:10px; } .leaflet-bottom .leaflet-control { margin-bottom:10px; } .leaflet-left .leaflet-control { margin-left:10px; } .leaflet-right .leaflet-control { margin-right:10px; }
+    .leaflet-control-zoom a { display:block; width:30px; height:30px; line-height:30px; text-align:center; text-decoration:none; background:#fff; color:#222; border-bottom:1px solid #ccc; font:bold 18px Arial,sans-serif; }
+    .leaflet-control-zoom a:first-child { border-top-left-radius:4px; border-top-right-radius:4px; } .leaflet-control-zoom a:last-child { border-bottom-left-radius:4px; border-bottom-right-radius:4px; border-bottom:none; }
+    .leaflet-control-layers,.leaflet-bar { box-shadow:0 1px 5px rgba(0,0,0,.35); border-radius:4px; background:#fff; }
+    .leaflet-control-layers-toggle { background:#fff; width:36px; height:36px; display:block; }
+    .leaflet-control-layers-expanded { padding:6px 10px 6px 6px; color:#333; background:#fff; }
+    .leaflet-control-attribution { background:rgba(255,255,255,.8); margin:0; padding:0 5px; color:#333; }
+    .leaflet-popup { position:absolute; text-align:center; margin-bottom:20px; }
+    .leaflet-popup-content-wrapper { padding:1px; text-align:left; border-radius:12px; background:white; box-shadow:0 3px 14px rgba(0,0,0,.4); }
+    .leaflet-popup-content { margin:13px 20px 13px 20px; line-height:1.35; }
+    .leaflet-popup-tip-container { width:40px; height:20px; position:absolute; left:50%; margin-left:-20px; overflow:hidden; pointer-events:none; }
+    .leaflet-popup-tip { width:17px; height:17px; padding:1px; margin:-10px auto 0; transform:rotate(45deg); background:white; box-shadow:0 3px 14px rgba(0,0,0,.4); }
+    .leaflet-popup-close-button { position:absolute; top:0; right:0; padding:4px 4px 0 0; border:none; text-align:center; width:18px; height:14px; font:16px/14px Tahoma,Verdana,sans-serif; color:#757575; text-decoration:none; background:transparent; }
+    .leaflet-interactive { cursor:pointer; }
+
+    :root {
+      --bg:#f6f1e8; --panel:#ffffff; --ink:#1f1d1a; --muted:#696057; --line:#ded3c3;
+      --dark:#241b14; --gold:#b88c51; --pgh:#4d6b9a; --buf:#b96e3f; --green:#247443; --amber:#a97413; --red:#8b2635;
+    }
+    * { box-sizing:border-box; }
+    html, body { height:100%; margin:0; }
+    body { font-family:-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Helvetica,Arial,sans-serif; color:var(--ink); background:var(--bg); }
+    header { min-height:86px; padding:16px 22px 14px; color:#fff; background:linear-gradient(135deg,#21170f,#4c3824); border-bottom:4px solid var(--gold); }
+    header h1 { margin:0 0 6px; font-size:clamp(1.25rem,2.2vw,2rem); line-height:1.15; }
+    header p { margin:0; max-width:1050px; color:#f4e6d2; font-size:.94rem; }
+    .app { display:grid; grid-template-columns:380px minmax(0,1fr); height:calc(100vh - 86px); min-height:620px; }
+    aside { background:var(--panel); border-right:1px solid var(--line); overflow:auto; padding:14px; z-index:2; }
+    #map { height:100%; min-height:620px; width:100%; z-index:1; }
+    .stats { display:grid; grid-template-columns:repeat(3,1fr); gap:8px; margin-bottom:12px; }
+    .stat { border:1px solid var(--line); border-radius:12px; background:#fbfaf7; padding:10px; }
+    .stat strong { display:block; font-size:1.25rem; color:#304f50; } .stat span { display:block; font-size:.74rem; color:var(--muted); line-height:1.15; }
+    label { display:block; margin:9px 0 4px; font-weight:750; color:#3b332b; font-size:.78rem; }
+    input, select, button { width:100%; min-height:38px; border:1px solid var(--line); border-radius:10px; background:#fff; padding:8px 10px; font:inherit; }
+    button { margin-top:10px; border:none; background:#304f50; color:white; font-weight:800; cursor:pointer; } button:hover { filter:brightness(1.08); }
+    .links { display:flex; gap:8px; flex-wrap:wrap; margin-top:12px; }
+    .links a { color:#304f50; font-weight:750; font-size:.84rem; text-decoration:none; border-bottom:1px solid currentColor; cursor:pointer; }
+    .section { margin-top:15px; padding-top:13px; border-top:1px solid var(--line); } .section h2 { margin:0 0 8px; font-size:1rem; }
+    .legend-row { display:flex; align-items:center; gap:8px; margin:8px 0; color:var(--muted); font-size:.9rem; }
+    .dot { width:14px; height:14px; border-radius:99px; display:inline-block; border:2px solid #333; } .pgh { background:var(--pgh); } .buf { background:var(--buf); } .high { border-color:var(--green); } .medium { border-color:var(--amber); } .lowmedium { border-color:var(--red); }
+    .empty { color:var(--muted); font-size:.92rem; line-height:1.45; }
+    table { width:100%; border-collapse:collapse; font-size:.84rem; } th, td { border-bottom:1px solid #eee6dc; padding:6px 4px; text-align:left; vertical-align:top; } th { width:34%; color:#5b5047; font-weight:750; }
+    .record-list { display:grid; gap:8px; margin-top:8px; }
+    .record-card { border:1px solid var(--line); border-radius:12px; padding:10px; background:#fbfaf7; cursor:pointer; } .record-card:hover { border-color:var(--gold); box-shadow:0 3px 10px rgba(0,0,0,.08); }
+    .record-card strong { display:block; color:#221a14; margin-bottom:4px; } .record-card span { display:block; color:var(--muted); font-size:.82rem; line-height:1.35; }
+    .leaflet-popup-content { min-width:280px; max-width:390px; } .leaflet-popup-content h3 { margin:0 0 8px; font-size:1.05rem; }
+    .status { margin-top:8px; color:var(--muted); font-size:.82rem; }
+    @media (max-width:900px) {
+      header { min-height:auto; } .app { display:block; height:auto; min-height:0; } aside { max-height:none; border-right:none; border-bottom:1px solid var(--line); } #map { height:70vh; min-height:520px; }
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Black Cultural Institutions: Pittsburgh & Buffalo, 1920–1975</h1>
+    <p>Interactive review map for geocoded institution points, attributes, source notes, analytical periods, and confidence classifications.</p>
+  </header>
+  <main class="app">
+    <aside>
+      <section class="stats" aria-label="Dataset summary">
+        <div class="stat"><strong id="totalCount">20</strong><span>Total points</span></div>
+        <div class="stat"><strong id="visibleCount">20</strong><span>Visible after filters</span></div>
+        <div class="stat"><strong id="cityCount">2</strong><span>Cities</span></div>
+      </section>
+      <label for="searchInput">Search name, address, corridor, notes</label>
+      <input id="searchInput" type="search" placeholder="Example: Crawford, Wylie, union..." />
+      <label for="cityFilter">City</label><select id="cityFilter"><option value="">All cities</option></select>
+      <label for="typeFilter">Institution type</label><select id="typeFilter"><option value="">All types</option></select>
+      <label for="confidenceFilter">Geocode confidence</label><select id="confidenceFilter"><option value="">All confidence levels</option></select>
+      <button id="resetButton" type="button">Reset filters</button>
+      <div class="links">
+        <a id="downloadGeoJSON">Download GeoJSON</a>
+        <a href="spatial_data_metadata.txt" target="_blank" rel="noopener">View metadata</a>
+      </div>
+      <div class="status" id="statusText">Loading map…</div>
+      <section class="section">
+        <h2>Legend</h2>
+        <div class="legend-row"><span class="dot pgh"></span> Pittsburgh</div>
+        <div class="legend-row"><span class="dot buf"></span> Buffalo</div>
+        <div class="legend-row"><span class="dot high"></span> High confidence border</div>
+        <div class="legend-row"><span class="dot medium"></span> Medium confidence border</div>
+        <div class="legend-row"><span class="dot lowmedium"></span> Low-Medium confidence border</div>
+      </section>
+      <section class="section">
+        <h2>Selected institution</h2>
+        <div id="detailsPanel" class="empty">Click a point or a record below to inspect the associated data.</div>
+      </section>
+      <section class="section">
+        <h2>Records</h2>
+        <div id="recordList" class="record-list"></div>
+      </section>
+    </aside>
+    <div id="map" role="application" aria-label="Leaflet map of geocoded Black cultural institutions"></div>
+  </main>
+
+<script>
+const geojsonData = {"type":"FeatureCollection","name":"Black Cultural Institutions – Pittsburgh Hill District & Buffalo Michigan Street Corridor","crs":{"type":"name","properties":{"name":"urn:ogc:def:crs:EPSG::4326"}},"metadata":{"project":"Mapping Black Cultural Space: Spatial and Institutional Histories of Jazz, Governance, and Community Life in Pittsburgh and Buffalo, 1920–1975","spatial_data_lead":"Giana C., Spatial Data Architecture Lead","coordinate_system":"WGS84 / EPSG:4326","geometry_type":"Point","total_features":20,"cities_covered":["Pittsburgh, PA","Buffalo, NY"],"corridors":["Hill District – Wylie–Fullerton–Centre Avenue Corridor","Michigan Street Corridor"],"temporal_coverage":"1920–1975","analytical_periods":["1935–1955 (Institutional Formation)","1956–1975 (Integration and Disruption)","1976–1995 (Reorganization and Persistence)"],"geocode_method":"Address-based geocoding verified against historical city directories, Sanborn Fire Insurance Maps, NRHP listings, and newspaper sources","date_processed":"April 2026"},"features":[{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97618,40.44852]},"properties":{"institution_id":"PGH_001","institution_name":"Crawford Grill No. 1","city":"Pittsburgh","state":"PA","corridor":"Hill District – Wylie Avenue Corridor","address":"471 Wylie Ave","institution_type":"Jazz Club / Performance Venue","period_active":"1943–1962","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Pittsburgh Courier, Harper (2007), HDDP"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97534,40.44671]},"properties":{"institution_id":"PGH_002","institution_name":"New Granada Theater","city":"Pittsburgh","state":"PA","corridor":"Hill District – Centre Avenue Corridor","address":"2007 Centre Ave","institution_type":"Theater / Performance Venue","period_active":"1927–1963","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Pittsburgh Courier, Carnegie Library city directories"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97712,40.44715]},"properties":{"institution_id":"PGH_003","institution_name":"Centre Avenue YMCA","city":"Pittsburgh","state":"PA","corridor":"Hill District – Centre Avenue Corridor","address":"1325 Centre Ave","institution_type":"Civic Institution / Community Gathering Space","period_active":"1923–1978","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"HDDP, Carnegie Library archives"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97683,40.44808]},"properties":{"institution_id":"PGH_004","institution_name":"Musicians' Club of Local 471 (AFM)","city":"Pittsburgh","state":"PA","corridor":"Hill District – Wylie Avenue Corridor","address":"425 Wylie Ave","institution_type":"Union Hall / Labor Organization","period_active":"1935–1966","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Pittsburgh Courier, AFM records"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97582,40.44764]},"properties":{"institution_id":"PGH_005","institution_name":"Hurricane Lounge","city":"Pittsburgh","state":"PA","corridor":"Hill District – Wylie Avenue Corridor","address":"Wylie Ave near Fullerton St","institution_type":"Jazz Club / Nightclub","period_active":"1945–1960","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Medium","source_notes":"Pittsburgh Courier, oral history"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97557,40.44889]},"properties":{"institution_id":"PGH_006","institution_name":"Leader House","city":"Pittsburgh","state":"PA","corridor":"Hill District – Wylie Avenue Corridor","address":"Wylie Ave & Fullerton St","institution_type":"Ballroom / Social Hall","period_active":"1938–1958","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Medium","source_notes":"Harper (2007), HDDP photograph archives"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97744,40.44732]},"properties":{"institution_id":"PGH_007","institution_name":"Rhumba Theater","city":"Pittsburgh","state":"PA","corridor":"Hill District – Centre Avenue Corridor","address":"Centre Ave","institution_type":"Theater / Performance Venue","period_active":"1940–1956","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Medium","source_notes":"Pittsburgh Courier, Carnegie Library city directories"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97844,40.44651]},"properties":{"institution_id":"PGH_008","institution_name":"Hill District YMCA","city":"Pittsburgh","state":"PA","corridor":"Hill District – Fullerton Street Corridor","address":"2401 Wylie Ave","institution_type":"Civic Institution / Community Gathering Space","period_active":"1920–1975","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"HDDP, Carnegie Library archives"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97601,40.44839]},"properties":{"institution_id":"PGH_009","institution_name":"Crawford Grill No. 2","city":"Pittsburgh","state":"PA","corridor":"Hill District – Wylie Avenue Corridor","address":"Wylie Ave","institution_type":"Jazz Club / Performance Venue","period_active":"1962–1986","analytical_period":"1956–1975 (Integration and Disruption)","geocode_confidence":"High","source_notes":"Pittsburgh Courier, Harper (2007)"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-79.97693,40.44695]},"properties":{"institution_id":"PGH_010","institution_name":"Centre Avenue Ballroom","city":"Pittsburgh","state":"PA","corridor":"Hill District – Centre Avenue Corridor","address":"Centre Ave","institution_type":"Ballroom / Social Hall","period_active":"1930–1950","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Low-Medium","source_notes":"Single newspaper source; approximate address"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.86641,42.88342]},"properties":{"institution_id":"BUF_001","institution_name":"Colored Musicians Club – Local 533 (AFM)","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"145 Broadway","institution_type":"Union Hall / Jazz Club / Performance Venue","period_active":"1917–present","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"NRHP listing, Buffalo Criterion, Local 533 records"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.87094,42.89012]},"properties":{"institution_id":"BUF_002","institution_name":"Michigan Street Baptist Church","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"511 Michigan Ave","institution_type":"Religious Institution / Civic Space / Community Gathering","period_active":"1849–present","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"NRHP listing, Buffalo Criterion, church records"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.87143,42.88974]},"properties":{"institution_id":"BUF_003","institution_name":"Nash House","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"36 Nash St","institution_type":"Civic Institution / Community Organization","period_active":"1927–1975","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Buffalo Criterion, Michigan Street Preservation Corporation"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.86953,42.88781]},"properties":{"institution_id":"BUF_004","institution_name":"WUFO Radio Station","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"184 Barton St","institution_type":"Media / Civic Institution","period_active":"1961–1979","analytical_period":"1956–1975 (Integration and Disruption)","geocode_confidence":"High","source_notes":"Buffalo Criterion, Buffalo Challenger, FCC records"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.87053,42.88697]},"properties":{"institution_id":"BUF_005","institution_name":"Little Harlem Hotel and Club","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"494–496 Michigan Ave","institution_type":"Hotel / Jazz Club / Performance Venue","period_active":"1935–1965","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Buffalo Criterion, oral histories, city directories"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.86074,42.87934]},"properties":{"institution_id":"BUF_006","institution_name":"Pine Grill","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor – Jefferson Avenue extension","address":"1443–1449 Jefferson Ave","institution_type":"Jazz Club / Restaurant / Performance Venue","period_active":"1940–1972","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Buffalo Criterion, oral histories, city directories"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.87121,42.88882]},"properties":{"institution_id":"BUF_007","institution_name":"Michigan Avenue YMCA","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"585 Michigan Ave","institution_type":"Civic Institution / Community Gathering Space","period_active":"1922–1980","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"High","source_notes":"Buffalo Criterion, YMCA organizational records"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.86629,42.88318]},"properties":{"institution_id":"BUF_008","institution_name":"Colored Musicians Club Annex (Rehearsal Hall)","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"145 Broadway (rear)","institution_type":"Rehearsal Space / Performance Venue","period_active":"1935–1970","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Medium","source_notes":"Oral history, Local 533 internal documents"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.87032,42.88754]},"properties":{"institution_id":"BUF_009","institution_name":"Vendome Hotel","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"Michigan Ave","institution_type":"Hotel / Lodging for Touring Musicians","period_active":"1928–1955","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Medium","source_notes":"Buffalo Criterion, oral histories"}},{"type":"Feature","geometry":{"type":"Point","coordinates":[-78.87089,42.88841]},"properties":{"institution_id":"BUF_010","institution_name":"Buffalo Urban League Office","city":"Buffalo","state":"NY","corridor":"Michigan Street Corridor","address":"Michigan Ave","institution_type":"Civic Institution / Community Organization","period_active":"1927–1975","analytical_period":"1935–1955 (Institutional Formation)","geocode_confidence":"Medium","source_notes":"Buffalo Criterion, Urban League archives"}}]};
+const fieldLabels = { institution_id:"Institution ID", institution_name:"Institution Name", city:"City", state:"State", corridor:"Corridor", address:"Address", institution_type:"Institution Type", period_active:"Period Active", analytical_period:"Analytical Period", geocode_confidence:"Geocode Confidence", source_notes:"Source Notes" };
+const preferredFields = ["institution_id","institution_name","city","state","corridor","address","institution_type","period_active","analytical_period","geocode_confidence","source_notes"];
+const $ = id => document.getElementById(id);
+const norm = v => (v ?? "").toString().trim();
+const esc = v => norm(v).replaceAll("&","&amp;").replaceAll("<","&lt;").replaceAll(">","&gt;").replaceAll('"',"&quot;").replaceAll("'","&#039;");
+const cityColor = city => norm(city).toLowerCase()==="pittsburgh" ? "#4d6b9a" : norm(city).toLowerCase()==="buffalo" ? "#b96e3f" : "#606060";
+const confidenceBorder = conf => { const c=norm(conf).toLowerCase(); if(c==="high") return "#247443"; if(c==="medium") return "#a97413"; if(c.includes("low")) return "#8b2635"; return "#333"; };
+function propsTable(p) { return `<table><tbody>${preferredFields.filter(k => p[k]!==undefined && norm(p[k])!=="").map(k => `<tr><th>${fieldLabels[k] || k}</th><td>${esc(p[k])}</td></tr>`).join("")}</tbody></table>`; }
+function popupHTML(p) { return `<h3>${esc(p.institution_name || "Institution")}</h3>${propsTable(p)}`; }
+function setDetails(p) { $("detailsPanel").className=""; $("detailsPanel").innerHTML = propsTable(p); }
+function searchText(f) { return Object.values(f.properties || {}).join(" ").toLowerCase(); }
+function getFilters() { return { search:norm($("searchInput").value).toLowerCase(), city:norm($("cityFilter").value), type:norm($("typeFilter").value), confidence:norm($("confidenceFilter").value) }; }
+function matches(f, filter) { const p=f.properties||{}; return (!filter.search || searchText(f).includes(filter.search)) && (!filter.city || norm(p.city)===filter.city) && (!filter.type || norm(p.institution_type)===filter.type) && (!filter.confidence || norm(p.geocode_confidence)===filter.confidence); }
+function populateSelect(id, values) { const sel=$(id); values.forEach(v => { const o=document.createElement("option"); o.value=v; o.textContent=v; sel.appendChild(o); }); }
+function unique(features, key) { return [...new Set(features.map(f => norm((f.properties||{})[key])).filter(Boolean))].sort(); }
+
+const features = geojsonData.features || [];
+let markerRecords = [];
+let markerLayer;
+let map;
+
+function initMap() {
+  if (!window.L) { $("statusText").textContent = "Leaflet did not load. Check internet/CDN access."; return; }
+  map = L.map("map", { scrollWheelZoom:true, preferCanvas:false }).setView([41.7,-79.45],7);
+  const osm = L.tileLayer("https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png", { maxZoom:19, attribution:"&copy; OpenStreetMap contributors" }).addTo(map);
+  const carto = L.tileLayer("https://{s}.basemaps.cartocdn.com/light_all/{z}/{x}/{y}{r}.png", { maxZoom:20, attribution:"&copy; OpenStreetMap contributors &copy; CARTO" });
+  L.control.layers({ "OpenStreetMap":osm, "CARTO Light":carto }, null, { collapsed:true }).addTo(map);
+  markerLayer = L.layerGroup().addTo(map);
+  markerRecords = features.map(f => {
+    const coords = f.geometry && f.geometry.coordinates;
+    if (!coords || coords.length < 2) return null;
+    const p = f.properties || {};
+    const lon = Number(coords[0]), lat = Number(coords[1]);
+    const marker = L.circleMarker([lat, lon], { radius:8, fillColor:cityColor(p.city), color:confidenceBorder(p.geocode_confidence), weight:3, opacity:1, fillOpacity:.86 });
+    marker.bindPopup(popupHTML(p));
+    marker.on("click", () => setDetails(p));
+    return { marker, feature:f, lat, lon };
+  }).filter(Boolean);
+
+  $("totalCount").textContent = markerRecords.length;
+  $("cityCount").textContent = unique(features,"city").length;
+  populateSelect("cityFilter", unique(features,"city"));
+  populateSelect("typeFilter", unique(features,"institution_type"));
+  populateSelect("confidenceFilter", unique(features,"geocode_confidence"));
+  ["searchInput","cityFilter","typeFilter","confidenceFilter"].forEach(id => { $(id).addEventListener("input", render); $(id).addEventListener("change", render); });
+  $("resetButton").addEventListener("click", () => { ["searchInput","cityFilter","typeFilter","confidenceFilter"].forEach(id => $(id).value=""); render(); });
+  $("downloadGeoJSON").addEventListener("click", () => {
+    const blob = new Blob([JSON.stringify(geojsonData, null, 2)], {type:"application/geo+json"});
+    const url = URL.createObjectURL(blob); const a = document.createElement("a"); a.href=url; a.download="black_cultural_institutions_geocoded.geojson"; a.click(); URL.revokeObjectURL(url);
+  });
+  window.addEventListener("resize", () => map.invalidateSize());
+  setTimeout(() => { map.invalidateSize(); render(); }, 80);
+}
+
+function renderRecords(records) {
+  const list = $("recordList"); list.innerHTML = "";
+  if (!records.length) { list.innerHTML = `<div class="empty">No records match the current filters.</div>`; return; }
+  records.forEach(r => {
+    const p = r.feature.properties || {};
+    const card = document.createElement("div"); card.className="record-card"; card.tabIndex=0;
+    card.innerHTML = `<strong>${esc(p.institution_name || "Institution")}</strong><span>${esc([p.city,p.state].filter(Boolean).join(", "))}</span><span>${esc(p.address || "")}</span><span>${esc(p.institution_type || "")}</span>`;
+    const selectRecord = () => { map.setView([r.lat,r.lon],16); r.marker.openPopup(); setDetails(p); };
+    card.addEventListener("click", selectRecord); card.addEventListener("keydown", e => { if(e.key==="Enter" || e.key===" ") selectRecord(); });
+    list.appendChild(card);
+  });
+}
+function render() {
+  const filter = getFilters(); markerLayer.clearLayers();
+  const visible = markerRecords.filter(r => matches(r.feature, filter));
+  visible.forEach(r => markerLayer.addLayer(r.marker));
+  $("visibleCount").textContent = visible.length; renderRecords(visible);
+  if (visible.length) { const group = L.featureGroup(visible.map(r => r.marker)); map.fitBounds(group.getBounds().pad(.22), { maxZoom:16 }); }
+  $("statusText").textContent = `${visible.length} of ${markerRecords.length} points visible`;
+}
+window.addEventListener("load", initMap);
+</script>
+</body>
+</html>

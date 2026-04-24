@@ -1,0 +1,170 @@
+=========================================================
+SPATIAL DATA PACKAGE — METADATA & DATA DICTIONARY
+Mapping Black Cultural Space: Spatial and Institutional Histories of
+Jazz, Governance, and Community Life in Pittsburgh and Buffalo, 1920–1975
+=========================================================
+
+PROJECT OVERVIEW
+-----------------
+This spatial data package contains the geocoded point layer for Black
+cultural institutions documented in the Hill District (Pittsburgh, PA)
+and the Michigan Street Corridor (Buffalo, NY), covering the period
+1920–1975.
+
+FILES IN THIS PACKAGE
+----------------------
+1. black_cultural_institutions_geocoded.csv
+   → Primary geocoded dataset (CSV with latitude/longitude columns)
+   → Compatible with QGIS, ArcGIS, Google Earth, R (sf), Python (geopandas)
+
+2. black_cultural_institutions_geocoded.geojson
+   → Same dataset in GeoJSON format
+   → Ready for direct import into QGIS, ArcGIS Pro, Mapbox, Leaflet
+
+3. spatial_data_metadata.txt  (this file)
+   → Data dictionary, CRS documentation, confidence classifications,
+     source hierarchy, and usage notes
+
+
+COORDINATE REFERENCE SYSTEM (CRS)
+-----------------------------------
+CRS Name    : WGS 84
+EPSG Code   : EPSG:4326
+Datum       : World Geodetic System 1984
+Projection  : Geographic (unprojected lat/long decimal degrees)
+X axis      : Longitude (negative values = west of Prime Meridian)
+Y axis      : Latitude (positive values = north of Equator)
+
+Note: For spatial analysis requiring distance or area calculations
+(e.g., kernel density estimation, buffer analysis), reproject to a
+suitable projected CRS before analysis:
+  - Pittsburgh: Pennsylvania State Plane South (EPSG:32129) or UTM Zone 17N (EPSG:32617)
+  - Buffalo: New York State Plane West (EPSG:32115) or UTM Zone 17N (EPSG:32617)
+
+
+STUDY AREAS
+------------
+1. Hill District, Pittsburgh, PA
+   Corridors: Wylie Avenue, Fullerton Street, Centre Avenue
+   Approx. bounding box: 40.444°N – 40.452°N, 79.971°W – 79.982°W
+
+2. Michigan Street Corridor, Buffalo, NY
+   Anchored by Michigan Ave, extending to Jefferson Ave and Broadway
+   Approx. bounding box: 42.878°N – 42.892°N, 78.858°W – 78.875°W
+
+
+ANALYTICAL PERIODS
+-------------------
+Period 1: 1935–1955 — Institutional Formation
+  Dense institutional clustering; strong localized ecosystems
+
+Period 2: 1956–1975 — Integration and Disruption
+  Union mergers, urban renewal, institutional relocation or decline
+
+Period 3: 1976–1995 — Reorganization and Persistence
+  Adaptation, survival, distributed institutional patterns
+
+
+DATA DICTIONARY — FIELD DESCRIPTIONS
+--------------------------------------
+institution_id     Unique identifier. Prefix PGH_ = Pittsburgh; BUF_ = Buffalo.
+institution_name   Full documented name of the institution.
+city               Municipality.
+state              US state abbreviation.
+corridor           Named spatial corridor within study area.
+address            Historical street address (as documented in primary sources).
+latitude           Decimal degrees, WGS84 / EPSG:4326. Y coordinate.
+longitude          Decimal degrees, WGS84 / EPSG:4326. X coordinate (negative = west).
+crs                Coordinate Reference System. All points: EPSG:4326.
+institution_type   Functional category (see type taxonomy below).
+period_active      Approximate operational lifespan based on archival sources.
+analytical_period  One of three analytical periods defined by the study framework.
+geocode_confidence Confidence classification (see confidence schema below).
+source_notes       Primary and secondary sources used for location verification.
+
+
+INSTITUTION TYPE TAXONOMY
+--------------------------
+- Jazz Club / Performance Venue
+- Theater / Performance Venue
+- Ballroom / Social Hall
+- Union Hall / Labor Organization
+- Civic Institution / Community Gathering Space
+- Religious Institution / Civic Space / Community Gathering
+- Hotel / Jazz Club / Performance Venue
+- Hotel / Lodging for Touring Musicians
+- Media / Civic Institution
+- Rehearsal Space / Performance Venue
+- Civic Institution / Community Organization
+
+
+GEOCODE CONFIDENCE SCHEMA
+--------------------------
+High        Address confirmed in ≥2 independent primary sources (e.g., NRHP listing,
+            city directories, newspaper evidence, Sanborn Fire Insurance Maps).
+            Point location reliable to within one city block.
+
+Medium      Address based on single primary source or cross-referenced with
+            secondary sources. Point location approximate; may be off by 1–2 blocks.
+
+Low-Medium  Address approximate or reconstructed from contextual evidence
+            (e.g., intersection references, neighborhood descriptions).
+            Treat as indicative only; do not use for precision analysis.
+
+
+PRIMARY SOURCE HIERARCHY
+--------------------------
+Tier 1 (Highest confidence):
+  - National Register of Historic Places (NRHP) listings
+  - American Federation of Musicians (AFM) local union records
+  - Sanborn Fire Insurance Maps (digitized series)
+  - Carnegie Library of Pittsburgh city directory collection
+
+Tier 2:
+  - Pittsburgh Courier (1910–1975 digitized run)
+  - Buffalo Criterion (1925–1975)
+  - Buffalo Challenger (1963–1975)
+  - Hill District Digital History Project (HDDP) photograph and document archives
+  - Michigan Street Preservation Corporation archives
+
+Tier 3:
+  - Oral histories (named and dated)
+  - Harper, Colter (2007). Doctoral dissertation on Hill District jazz geography.
+  - Secondary scholarly sources (Cilli 2021; Mahala 2022; Alfonso 2017; Roane 2023)
+
+Tier 4 (Lowest confidence — flagged in source_notes):
+  - Single newspaper references without address confirmation
+  - Oral history without corroborating documentary source
+
+
+SPATIAL DATA LEAD
+------------------
+Giana C.
+Spatial Data Architecture Lead
+Dataset schema design, spatial framework construction, geocoding
+verification, and confidence classification.
+Chapters 3 and 4 of the dissertation document full methodological
+detail for this spatial layer.
+
+
+USAGE NOTES
+------------
+- Load CSV into QGIS: Layer → Add Layer → Add Delimited Text Layer
+  Set X field = longitude, Y field = latitude, CRS = EPSG:4326
+
+- Load GeoJSON into QGIS: Layer → Add Layer → Add Vector Layer
+  CRS is embedded in the file header.
+
+- Load into Python (geopandas):
+    import geopandas as gpd
+    gdf = gpd.read_file("black_cultural_institutions_geocoded.geojson")
+    print(gdf.crs)   # should return EPSG:4326
+
+- For kernel density estimation (KDE) or buffer analysis, reproject:
+    gdf_proj = gdf.to_crs("EPSG:32617")  # UTM Zone 17N
+
+
+=========================================================
+Prepared: April 2026 | Spatial Data Architecture: Giana C.
+Project Lead: Umar | GIS & Cartography: Ronald
+=========================================================

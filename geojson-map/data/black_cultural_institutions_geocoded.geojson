@@ -1,0 +1,347 @@
+{
+  "type": "FeatureCollection",
+  "name": "Black Cultural Institutions – Pittsburgh Hill District & Buffalo Michigan Street Corridor",
+  "crs": {
+    "type": "name",
+    "properties": { "name": "urn:ogc:def:crs:EPSG::4326" }
+  },
+  "metadata": {
+    "project": "Mapping Black Cultural Space: Spatial and Institutional Histories of Jazz, Governance, and Community Life in Pittsburgh and Buffalo, 1920–1975",
+    "spatial_data_lead": "Giana C., Spatial Data Architecture Lead",
+    "coordinate_system": "WGS84 / EPSG:4326",
+    "geometry_type": "Point",
+    "total_features": 20,
+    "cities_covered": ["Pittsburgh, PA", "Buffalo, NY"],
+    "corridors": ["Hill District – Wylie–Fullerton–Centre Avenue Corridor", "Michigan Street Corridor"],
+    "temporal_coverage": "1920–1975",
+    "analytical_periods": [
+      "1935–1955 (Institutional Formation)",
+      "1956–1975 (Integration and Disruption)",
+      "1976–1995 (Reorganization and Persistence)"
+    ],
+    "geocode_method": "Address-based geocoding verified against historical city directories, Sanborn Fire Insurance Maps, NRHP listings, and newspaper sources",
+    "date_processed": "April 2026"
+  },
+  "features": [
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97618, 40.44852] },
+      "properties": {
+        "institution_id": "PGH_001",
+        "institution_name": "Crawford Grill No. 1",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Wylie Avenue Corridor",
+        "address": "471 Wylie Ave",
+        "institution_type": "Jazz Club / Performance Venue",
+        "period_active": "1943–1962",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Pittsburgh Courier, Harper (2007), HDDP"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97534, 40.44671] },
+      "properties": {
+        "institution_id": "PGH_002",
+        "institution_name": "New Granada Theater",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Centre Avenue Corridor",
+        "address": "2007 Centre Ave",
+        "institution_type": "Theater / Performance Venue",
+        "period_active": "1927–1963",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Pittsburgh Courier, Carnegie Library city directories"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97712, 40.44715] },
+      "properties": {
+        "institution_id": "PGH_003",
+        "institution_name": "Centre Avenue YMCA",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Centre Avenue Corridor",
+        "address": "1325 Centre Ave",
+        "institution_type": "Civic Institution / Community Gathering Space",
+        "period_active": "1923–1978",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "HDDP, Carnegie Library archives"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97683, 40.44808] },
+      "properties": {
+        "institution_id": "PGH_004",
+        "institution_name": "Musicians' Club of Local 471 (AFM)",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Wylie Avenue Corridor",
+        "address": "425 Wylie Ave",
+        "institution_type": "Union Hall / Labor Organization",
+        "period_active": "1935–1966",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Pittsburgh Courier, AFM records"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97582, 40.44764] },
+      "properties": {
+        "institution_id": "PGH_005",
+        "institution_name": "Hurricane Lounge",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Wylie Avenue Corridor",
+        "address": "Wylie Ave near Fullerton St",
+        "institution_type": "Jazz Club / Nightclub",
+        "period_active": "1945–1960",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Medium",
+        "source_notes": "Pittsburgh Courier, oral history"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97557, 40.44889] },
+      "properties": {
+        "institution_id": "PGH_006",
+        "institution_name": "Leader House",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Wylie Avenue Corridor",
+        "address": "Wylie Ave & Fullerton St",
+        "institution_type": "Ballroom / Social Hall",
+        "period_active": "1938–1958",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Medium",
+        "source_notes": "Harper (2007), HDDP photograph archives"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97744, 40.44732] },
+      "properties": {
+        "institution_id": "PGH_007",
+        "institution_name": "Rhumba Theater",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Centre Avenue Corridor",
+        "address": "Centre Ave",
+        "institution_type": "Theater / Performance Venue",
+        "period_active": "1940–1956",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Medium",
+        "source_notes": "Pittsburgh Courier, Carnegie Library city directories"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97844, 40.44651] },
+      "properties": {
+        "institution_id": "PGH_008",
+        "institution_name": "Hill District YMCA",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Fullerton Street Corridor",
+        "address": "2401 Wylie Ave",
+        "institution_type": "Civic Institution / Community Gathering Space",
+        "period_active": "1920–1975",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "HDDP, Carnegie Library archives"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97601, 40.44839] },
+      "properties": {
+        "institution_id": "PGH_009",
+        "institution_name": "Crawford Grill No. 2",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Wylie Avenue Corridor",
+        "address": "Wylie Ave",
+        "institution_type": "Jazz Club / Performance Venue",
+        "period_active": "1962–1986",
+        "analytical_period": "1956–1975 (Integration and Disruption)",
+        "geocode_confidence": "High",
+        "source_notes": "Pittsburgh Courier, Harper (2007)"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-79.97693, 40.44695] },
+      "properties": {
+        "institution_id": "PGH_010",
+        "institution_name": "Centre Avenue Ballroom",
+        "city": "Pittsburgh", "state": "PA",
+        "corridor": "Hill District – Centre Avenue Corridor",
+        "address": "Centre Ave",
+        "institution_type": "Ballroom / Social Hall",
+        "period_active": "1930–1950",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Low-Medium",
+        "source_notes": "Single newspaper source; approximate address"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.86641, 42.88342] },
+      "properties": {
+        "institution_id": "BUF_001",
+        "institution_name": "Colored Musicians Club – Local 533 (AFM)",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "145 Broadway",
+        "institution_type": "Union Hall / Jazz Club / Performance Venue",
+        "period_active": "1917–present",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "NRHP listing, Buffalo Criterion, Local 533 records"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.87094, 42.89012] },
+      "properties": {
+        "institution_id": "BUF_002",
+        "institution_name": "Michigan Street Baptist Church",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "511 Michigan Ave",
+        "institution_type": "Religious Institution / Civic Space / Community Gathering",
+        "period_active": "1849–present",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "NRHP listing, Buffalo Criterion, church records"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.87143, 42.88974] },
+      "properties": {
+        "institution_id": "BUF_003",
+        "institution_name": "Nash House",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "36 Nash St",
+        "institution_type": "Civic Institution / Community Organization",
+        "period_active": "1927–1975",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Buffalo Criterion, Michigan Street Preservation Corporation"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.86953, 42.88781] },
+      "properties": {
+        "institution_id": "BUF_004",
+        "institution_name": "WUFO Radio Station",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "184 Barton St",
+        "institution_type": "Media / Civic Institution",
+        "period_active": "1961–1979",
+        "analytical_period": "1956–1975 (Integration and Disruption)",
+        "geocode_confidence": "High",
+        "source_notes": "Buffalo Criterion, Buffalo Challenger, FCC records"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.87053, 42.88697] },
+      "properties": {
+        "institution_id": "BUF_005",
+        "institution_name": "Little Harlem Hotel and Club",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "494–496 Michigan Ave",
+        "institution_type": "Hotel / Jazz Club / Performance Venue",
+        "period_active": "1935–1965",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Buffalo Criterion, oral histories, city directories"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.86074, 42.87934] },
+      "properties": {
+        "institution_id": "BUF_006",
+        "institution_name": "Pine Grill",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor – Jefferson Avenue extension",
+        "address": "1443–1449 Jefferson Ave",
+        "institution_type": "Jazz Club / Restaurant / Performance Venue",
+        "period_active": "1940–1972",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Buffalo Criterion, oral histories, city directories"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.87121, 42.88882] },
+      "properties": {
+        "institution_id": "BUF_007",
+        "institution_name": "Michigan Avenue YMCA",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "585 Michigan Ave",
+        "institution_type": "Civic Institution / Community Gathering Space",
+        "period_active": "1922–1980",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "High",
+        "source_notes": "Buffalo Criterion, YMCA organizational records"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.86629, 42.88318] },
+      "properties": {
+        "institution_id": "BUF_008",
+        "institution_name": "Colored Musicians Club Annex (Rehearsal Hall)",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "145 Broadway (rear)",
+        "institution_type": "Rehearsal Space / Performance Venue",
+        "period_active": "1935–1970",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Medium",
+        "source_notes": "Oral history, Local 533 internal documents"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.87032, 42.88754] },
+      "properties": {
+        "institution_id": "BUF_009",
+        "institution_name": "Vendome Hotel",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "Michigan Ave",
+        "institution_type": "Hotel / Lodging for Touring Musicians",
+        "period_active": "1928–1955",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Medium",
+        "source_notes": "Buffalo Criterion, oral histories"
+      }
+    },
+    {
+      "type": "Feature",
+      "geometry": { "type": "Point", "coordinates": [-78.87089, 42.88841] },
+      "properties": {
+        "institution_id": "BUF_010",
+        "institution_name": "Buffalo Urban League Office",
+        "city": "Buffalo", "state": "NY",
+        "corridor": "Michigan Street Corridor",
+        "address": "Michigan Ave",
+        "institution_type": "Civic Institution / Community Organization",
+        "period_active": "1927–1975",
+        "analytical_period": "1935–1955 (Institutional Formation)",
+        "geocode_confidence": "Medium",
+        "source_notes": "Buffalo Criterion, Urban League archives"
+      }
+    }
+  ]
+}

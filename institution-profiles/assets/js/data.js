@@ -1,0 +1,753 @@
+window.INSTITUTIONS = [
+  {
+    "id": "institution-01",
+    "slug": "michigan-street-baptist-church",
+    "institution_name": "Michigan Street Baptist Church",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Church / civic gathering space",
+    "text": "The history of the Michigan Street Baptist Church begins in 1836 when a group of African American men met in a brick schoolhouse on South Division Street to incorporate themselves as the Second Baptist Society of Buffalo. In 1845 a group of six trustees purchased land just east of downtown on Michigan Street.",
+    "excerpt": "The history of the Michigan Street Baptist Church begins in 1836 when a group of African American men met in a brick schoolhouse on South Division Street to incorporate…",
+    "image_paths": [
+      "assets/images/michigan-street-baptist-church/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-02",
+    "slug": "nash-house",
+    "institution_name": "Nash House",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Community / social institution",
+    "text": "The former residence of Rev. J. Edward Nash, the pastor of the Michigan Avenue Baptist Church. Many of Rev. Nash’s sermons and letters, which are a crucial part of Buffalo’s African American community history, were written here and are on display for viewing.",
+    "excerpt": "The former residence of Rev. J. Edward Nash, the pastor of the Michigan Avenue Baptist Church.",
+    "image_paths": [
+      "assets/images/nash-house/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-03",
+    "slug": "colored-musicians-club",
+    "institution_name": "Colored Musicians Club",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Labor / governance infrastructure",
+    "text": "The Colored Musicians Club is the only continuously running, all-Black-owned music venue in the United States.",
+    "excerpt": "The Colored Musicians Club is the only continuously running, all-Black-owned music venue in the United States.",
+    "image_paths": [
+      "assets/images/colored-musicians-club/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-04",
+    "slug": "wufo-radio",
+    "institution_name": "WUFO Radio",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Media / communication infrastructure",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/wufo-radio/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-05",
+    "slug": "michigan-avenue-ymca",
+    "institution_name": "Michigan Avenue YMCA",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Community / social institution",
+    "text": "The Michigan Avenue YMCA in Buffalo, NY, was a historic self-help organization and hub for the African American community, opening on April 15, 1928.",
+    "excerpt": "The Michigan Avenue YMCA in Buffalo, NY, was a historic self-help organization and hub for the African American community, opening on April 15, 1928.",
+    "image_paths": [
+      "assets/images/michigan-avenue-ymca/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-06",
+    "slug": "st-philips-episcopal-church",
+    "institution_name": "St. Philip's Episcopal Church",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Church / civic gathering space",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/st-philips-episcopal-church/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-07",
+    "slug": "vendome-hotel",
+    "institution_name": "Vendome Hotel",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Hospitality / touring infrastructure",
+    "text": "The Vendome Hotel was a historic two-story building in Buffalo, New York, located at 175-177 Clinton Street between Michigan Avenue and Pine Street. Operating from at least 1899, it was known for a first-floor dining room and concert hall that hosted musicians like the Count Basie Orchestra in 1936.",
+    "excerpt": "The Vendome Hotel was a historic two-story building in Buffalo, New York, located at 175-177 Clinton Street between Michigan Avenue and Pine Street.",
+    "image_paths": [
+      "assets/images/vendome-hotel/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-08",
+    "slug": "moonglow-club",
+    "institution_name": "Moonglow Club",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "Two-story building with composition roof at the corner of Michigan, William, and Vine Alley. According to the 1925-51 Sanborn map, the height from the ground to the roof of 460-464 Michigan was 20 feet. The walls were 12 inches thick on both stories. There was a one-story kitchen on the back of building with composition roofing. On Vine Alley, the nightclub, restaurant, and kitchen adjoined a filling station.\n\nDetailed History\n\nDown the street from Ann Montgomery's Little Harlem, the Moonglow was part of the East Side culture and the Michigan strip. Its close proximity to Hotel Winters, Little Harlem, Pearl's (across the street), and Clover Leaf made it a nightlife destination. Entertainment varied from Hot-Cha girls to the Buffalo Philharmonic Orchestra. All lots at this intersection are either new construction or empty lots.",
+    "excerpt": "Two-story building with composition roof at the corner of Michigan, William, and Vine Alley.",
+    "image_paths": [
+      "assets/images/moonglow-club/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-09",
+    "slug": "buffalo-criterion",
+    "institution_name": "Buffalo Criterion",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Media / communication infrastructure",
+    "text": "Title: The Buffalo Criterion\nPublisher: [s.n.]\nFrequency: Weekly\nYears In Publication: 1925-1973\nAvailable online: 5 January 1952 - 29 December 1973 (752 issues)\nLocation: Buffalo, Erie County",
+    "excerpt": "Title: The Buffalo Criterion Publisher: [s.n.] Frequency: Weekly Years In Publication: 1925-1973 Available online: 5 January 1952 - 29 December 1973 (752 issues)…",
+    "image_paths": [
+      "assets/images/buffalo-criterion/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-10",
+    "slug": "buffalo-urban-league",
+    "institution_name": "Buffalo Urban League",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Civic / civil-rights institution",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/buffalo-urban-league/image-1.png"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-11",
+    "slug": "buffalo-naacp",
+    "institution_name": "Buffalo NAACP",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Civic / civil-rights institution",
+    "text": "The purpose of the Buffalo Branch of the National Association for the Advancement of Colored People shall be to improve the political, educational, social and economic status of minority groups; to eliminate racial prejudice; to keep the public aware of the adverse effects of racial discrimination; and to take lawful action to secure its elimination, consistent with the efforts of the national organization and in conformity with the articles of Incorporation of the Association, its Constitution and By-Laws, and as directed by the National Board of Directors",
+    "excerpt": "The purpose of the Buffalo Branch of the National Association for the Advancement of Colored People shall be to improve the political, educational, social and economic…",
+    "image_paths": [
+      "assets/images/buffalo-naacp/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-12",
+    "slug": "little-harlem-hotel-and-club",
+    "institution_name": "Little Harlem Hotel & Club",
+    "city": "Buffalo",
+    "corridor": "Michigan Street Corridor",
+    "layer": "Hospitality / touring infrastructure",
+    "text": "Ann Montgomery's Little Harlem Hotel & Club was a premier African-American owned entertainment venue and hotel located at 496 Michigan Avenue in Buffalo, New York, operating from the 1930s to the early 1960s. It was a key jazz hub featuring stars like Louis Armstrong and Billie Holiday, while serving as a safe, central landmark for black travelers. [1, 2, 3, 4, 5, 6]",
+    "excerpt": "Ann Montgomery's Little Harlem Hotel & Club was a premier African-American owned entertainment venue and hotel located at 496 Michigan Avenue in Buffalo, New York,…",
+    "image_paths": [
+      "assets/images/little-harlem-hotel-and-club/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-13",
+    "slug": "pine-grill",
+    "institution_name": "Pine Grill",
+    "city": "Buffalo",
+    "corridor": "Buffalo East Side / Black press + jazz network",
+    "layer": "Labor / governance infrastructure",
+    "text": "Description\n\nAccording to a Buffalo Sanborn Map last updated in 1950, the Pine Grill was housed in a three-story brick building with composition roofing spanning from 1443 to 1449 Jefferson Avenue. It was located on the east side of Jefferson Avenue between East Ferry Street and Woodlawn Avenue. A church occupied the second story above the Pine Grill, and stores flanked it on either side.\n \n\nDetailed History\n\nAn extremely influential site to the Buffalo jazz scene, Pine Grill was a location on the “Chitlin Circuit,” a string of venues considered safe for Black performers. It saw its fair share of performances by well-known musicians, including B.B. King, Jimmy Smith, Jerry Butler, Bo Diddley, and Gladys Knight. The venue was founded by Norm Solomon. A video documentary was published by the Buffalo History Channel, a YouTube channel, concerning the location and its legacy in 2021 (https://www.youtube.com/watch?v=G4ZsvaRDOXA). A regular music festival occurs at MLK Park in Buffalo titled the “Pine Grill Jazz Reunion.” The current location is home to a parking lot.",
+    "excerpt": "According to a Buffalo Sanborn Map last updated in 1950, the Pine Grill was housed in a three-story brick building with composition roofing spanning from 1443 to 1449…",
+    "image_paths": [
+      "assets/images/pine-grill/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-14",
+    "slug": "centre-avenue-ymca",
+    "institution_name": "Centre Avenue YMCA",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Community / social institution",
+    "text": "The Centre Avenue YMCA is set to undergo a $7 million renovation over the next 10 months beginning in February. \nOn Friday, February 14, YMCA of Greater Pittsburgh and ACTION-Housing will commemorate the kickoff of the Centre Avenue YMCA renovation project with an event at 10:30 a.m. at the historic Y located at 2621 Centre Ave. in the Hill District.",
+    "excerpt": "The Centre Avenue YMCA is set to undergo a $7 million renovation over the next 10 months beginning in February.",
+    "image_paths": [
+      "assets/images/centre-avenue-ymca/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-15",
+    "slug": "new-granada-theater",
+    "institution_name": "New Granada Theater",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The New Granada, located in the Hill District at 2007 Centre Avenue, tells a story that is still being created today. The three-story building has served various roles in the community throughout the decades. From ballroom dancing, star-studded music performances, weekly cinematic features, and community events, all have taken place at this site, serving as an \"icon\" for the Hill District then and now.",
+    "excerpt": "The New Granada, located in the Hill District at 2007 Centre Avenue, tells a story that is still being created today.",
+    "image_paths": [
+      "assets/images/new-granada-theater/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-16",
+    "slug": "musicians-club-local-471",
+    "institution_name": "Musicians' Club (Local 471)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Labor / governance infrastructure",
+    "text": "The Pittsburgh Musicians' Union (PMU) is an organization of over 750 professional musicians. For more than 100 years, the PMU has been working to achieve dignity and just wages for our art. Our members include the Pittsburgh Symphony Orchestra, the Pittsburgh Opera Orchestra, Pittsburgh Ballet Theatre Orchestra, the River City Brass Band and the orchestras for Pittsburgh Civic Light Opera and many other performing arts groups. We represent musicians performing all styles of music: alternative rock, soul, classical, jazz, rock, country, pop, reggae, Christian rock, and others. Also musicians active in recording commercials, television and radio programs and CD's, and musicians performing at private and corporate parties locally and throughout North America.",
+    "excerpt": "The Pittsburgh Musicians' Union (PMU) is an organization of over 750 professional musicians.",
+    "image_paths": [
+      "assets/images/musicians-club-local-471/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-17",
+    "slug": "crawford-grill-no-2",
+    "institution_name": "Crawford Grill No. 2",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "A key remnant of Pittsburgh’s 20th century musical culture, Crawford Grill was a landmark of Black entrepreneurship, inclusive atmosphere, and legendary jazz music.",
+    "excerpt": "A key remnant of Pittsburgh’s 20th century musical culture, Crawford Grill was a landmark of Black entrepreneurship, inclusive atmosphere, and legendary jazz music.",
+    "image_paths": [
+      "assets/images/crawford-grill-no-2/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-18",
+    "slug": "pythian-temple",
+    "institution_name": "Pythian Temple",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Black cultural institution",
+    "text": "The Pythian Temple refers primarily to two historic, architecturally significant buildings. The 1909 New Orleans Temple was a pioneering African American-built high-rise hub for business and culture. The 1927 NYC Pythian Temple (135 W 70th St) is an Egyptian Revival structure known for its ornate pharaoh statues, former use as a Decca recording studio, and current conversion into luxury apartments.",
+    "excerpt": "The Pythian Temple refers primarily to two historic, architecturally significant buildings.",
+    "image_paths": [
+      "assets/images/pythian-temple/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-19",
+    "slug": "savoy-ballroom-pythian-building",
+    "institution_name": "Savoy Ballroom (Pythian building)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The Savoy Ballroom was a legendary, desegregated dance venue in Harlem, New York City (1926–1958), famous for fostering swing dance, the Lindy Hop, and hosting major jazz bands like Chick Webb and Ella Fitzgerald. It was a massive, second-floor ballroom that allowed both Black and white dancers. While some sources reference a \"Pythian\" connection, historical records primarily place this iconic Savoy in Harlem. [1, 2, 3, 4, 5]",
+    "excerpt": "The Savoy Ballroom was a legendary, desegregated dance venue in Harlem, New York City (1926–1958), famous for fostering swing dance, the Lindy Hop, and hosting major…",
+    "image_paths": [
+      "assets/images/savoy-ballroom-pythian-building/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-20",
+    "slug": "rhumba-theater",
+    "institution_name": "Rhumba Theater",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "Located in the Hill District neighborhood of Pittsburgh on Fullerton Street, near Wylie Avenue. The theatre had at least four names. It was the Burke’s Theatre by 1926. Renamed Golden Theatre by 1934. On September 25, 1935 it became a nightclub named Javo’s Jungle which closed in February 1937 due to liquor licence violations. By April 1937 it had been renamed Rhumba Theatre. It was operated by Jacob Solz and operated as an African-American theatre. It was still open in 1957.\nIt was demolished in 1958 to build the Civic Arena (which was demolished in 2011). All property on Fullerton Street (which no longer exists) by 2008 had been taken over by the Urban Redevelopment Authority of Pittsburgh.",
+    "excerpt": "Located in the Hill District neighborhood of Pittsburgh on Fullerton Street, near Wylie Avenue.",
+    "image_paths": [
+      "assets/images/rhumba-theater/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-21",
+    "slug": "ammon-recreation-center",
+    "institution_name": "Ammon Recreation Center",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Community / social institution",
+    "text": "Ammon Recreation Center, located at 2217 Bedford Avenue in Pittsburgh’s Hill District neighborhood, was originally the site of the Ammon ballpark. It was the home of some of the great Negro League teams from Pittsburgh. Today, there is a state-sponsored plaque that recognizes the historical significance of the ballpark site. Famed Negro League slugger Josh Gibson is also mentioned on the plaque.",
+    "excerpt": "Ammon Recreation Center, located at 2217 Bedford Avenue in Pittsburgh’s Hill District neighborhood, was originally the site of the Ammon ballpark.",
+    "image_paths": [
+      "assets/images/ammon-recreation-center/image-1.jpg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-22",
+    "slug": "bethel-african-methodist-episcopal-church",
+    "institution_name": "Bethel African Methodist Episcopal Church",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Church / civic gathering space",
+    "text": "Rooted in Tradition\nAs an African Methodist Episcopal church, we honor our rich heritage while embracing contemporary expressions of faith that speak to today's world.",
+    "excerpt": "Rooted in Tradition As an African Methodist Episcopal church, we honor our rich heritage while embracing contemporary expressions of faith that speak to today's world.",
+    "image_paths": [
+      "assets/images/bethel-african-methodist-episcopal-church/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-23",
+    "slug": "wesley-center-african-methodist-episcopal-zion-church",
+    "institution_name": "Wesley Center African Methodist Episcopal Zion Church",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Church / civic gathering space",
+    "text": "Wesley Center and Church at Centre Avenue and Francis Street, a Neo-Gothic brick building erected in 1927, is one of two surviving AME Zion churches in the Hill. A 1941 Buick coupe and 1941-42 Pontiac are parked on the right.",
+    "excerpt": "Wesley Center and Church at Centre Avenue and Francis Street, a Neo-Gothic brick building erected in 1927, is one of two surviving AME Zion churches in the Hill.",
+    "image_paths": [
+      "assets/images/wesley-center-african-methodist-episcopal-zion-church/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-24",
+    "slug": "trinity-african-methodist-episcopal-church",
+    "institution_name": "Trinity African Methodist Episcopal Church",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Church / civic gathering space",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/trinity-african-methodist-episcopal-church/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-25",
+    "slug": "buffalo-challenger",
+    "institution_name": "Buffalo Challenger",
+    "city": "Buffalo",
+    "corridor": "Buffalo East Side / Black press + jazz network",
+    "layer": "Media / communication infrastructure",
+    "text": "It All Began In 1963.\nIn the sixties, Black America was at a civil/human rights crossroads. The sit-ins, demonstrations, pickets and marches against racism and segregation in the south and second class citizenship for Blacks across the country, were met with violence and hatred; with guns and fire hoses, and even death.",
+    "excerpt": "In the sixties, Black America was at a civil/human rights crossroads.",
+    "image_paths": [
+      "assets/images/buffalo-challenger/image-1.png"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-26",
+    "slug": "leader-house",
+    "institution_name": "Leader House",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Community / social institution",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/leader-house/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-27",
+    "slug": "collins-inn",
+    "institution_name": "Collins Inn",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Hospitality / touring infrastructure",
+    "text": "The Collins Inn was a prominent early 1920s Pittsburgh nightclub in the Hill District, purchased by legendary businessman and sports promoter Gus Greenlee in 1922-1923. It served as a precursor to his famous Crawford Grill, hosting jazz musicians and functioning as a pivotal venue for African American culture before being renamed the Paramount Inn",
+    "excerpt": "The Collins Inn was a prominent early 1920s Pittsburgh nightclub in the Hill District, purchased by legendary businessman and sports promoter Gus Greenlee in 1922-1923.",
+    "image_paths": [
+      "assets/images/collins-inn/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-28",
+    "slug": "paramount-club",
+    "institution_name": "Paramount Club",
+    "city": "Pittsburgh region",
+    "corridor": "Pittsburgh regional nightlife network",
+    "layer": "Performance / nightlife venue",
+    "text": "The Paramount Club in Coraopolis was a notable historic Black party spot in the Pittsburgh area, serving as a social hub for R&B and nightlife from the late 1960s through the 1990s. It was part of a network of local Black-owned clubs that supported musical legacies, alongside other venues like the Rankin Elks, Savoy Ballroom, and the historic Crawford Grill. [1, 2, 3, 4]",
+    "excerpt": "The Paramount Club in Coraopolis was a notable historic Black party spot in the Pittsburgh area, serving as a social hub for R&B and nightlife from the late 1960s…",
+    "image_paths": [
+      "assets/images/paramount-club/image-1.jpg.webp"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-29",
+    "slug": "star-theater",
+    "institution_name": "Star Theater",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The building itself was originally built in 1916 as an automobile garage before being transformed into the Berkeley Theater, which ran from 1928 to 1949. \n\nThe Star's 1940's style parlor was originally the home of the town’s telephone exchange from 1937 to 1967. \n \n The Star got a major renovation in 1949 by the Alpine theatre chain, when the notable marquee was installed. It originally featured a bright \"A\".",
+    "excerpt": "The building itself was originally built in 1916 as an automobile garage before being transformed into the Berkeley Theater, which ran from 1928 to 1949.",
+    "image_paths": [
+      "assets/images/star-theater/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-30",
+    "slug": "savoy-ballroom-early-hill-district",
+    "institution_name": "Savoy Ballroom (early Hill District)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The New Granada, located in the Hill District at 2007 Centre Avenue, tells a story that is still being created today. The three-story building has served various roles in the community throughout the decades. From ballroom dancing, star-studded music performances, weekly cinematic features, and community events, all have taken place at this site, serving as an \"icon\" for the Hill District then and now.",
+    "excerpt": "The New Granada, located in the Hill District at 2007 Centre Avenue, tells a story that is still being created today.",
+    "image_paths": [
+      "assets/images/savoy-ballroom-early-hill-district/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-31",
+    "slug": "roosevelt-theater",
+    "institution_name": "Roosevelt Theater",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "Green Street. Cellar door on west side of the street about 40 feet north of Centre Avenue looking south near Roosevelt Theatre.\nExtent",
+    "excerpt": "Green Street. Cellar door on west side of the street about 40 feet north of Centre Avenue looking south near Roosevelt Theatre.",
+    "image_paths": [
+      "assets/images/roosevelt-theater/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-32",
+    "slug": "hill-city-auditorium",
+    "institution_name": "Hill City Auditorium",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Black cultural institution",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/hill-city-auditorium/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-33",
+    "slug": "granada-theater",
+    "institution_name": "Granada Theater",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The New Granada, located in the Hill District at 2007 Centre Avenue, tells a story that is still being created today. The three-story building has served various roles in the community throughout the decades. From ballroom dancing, star-studded music performances, weekly cinematic features, and community events, all have taken place at this site, serving as an \"icon\" for the Hill District then and now.",
+    "excerpt": "The New Granada, located in the Hill District at 2007 Centre Avenue, tells a story that is still being created today.",
+    "image_paths": [
+      "assets/images/granada-theater/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-34",
+    "slug": "javos-jungle",
+    "institution_name": "Javo's Jungle",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "\"Javo's Jungle\" was a historic, popular nightclub and floor show venue located on Fullerton Street in Pittsburgh's Hill District during the 1930s, often described as a \"classiest night club in the city\" before transitioning to the Rhumba in 1937. It was a key cultural spot in the black community, formerly known as Burk's Theatre and later Golden Theatre. [1, 2]",
+    "excerpt": "\"Javo's Jungle\" was a historic, popular nightclub and floor show venue located on Fullerton Street in Pittsburgh's Hill District during the 1930s, often described as a…",
+    "image_paths": [
+      "assets/images/javos-jungle/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-35",
+    "slug": "ritz-after-hours-club-in-rhumba-basement",
+    "institution_name": "Ritz (after-hours club in Rhumba basement)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500. The two floors of the structure contained nearly 8,000 total square feet, housing a dance hall, juke box theater, and retail space.",
+    "excerpt": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500.",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-36",
+    "slug": "el-congo-after-hours-club-in-rhumba-basement",
+    "institution_name": "El Congo (after-hours club in Rhumba basement)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500. The two floors of the structure contained nearly 8,000 total square feet, housing a dance hall, juke box theater, and retail space.",
+    "excerpt": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500.",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-37",
+    "slug": "bambola-social-club",
+    "institution_name": "Bambola Social Club",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500. The two floors of the structure contained nearly 8,000 total square feet, housing a dance hall, juke box theater, and retail space.",
+    "excerpt": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500.",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-38",
+    "slug": "tia-juana-club",
+    "institution_name": "Tia Juana Club",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500. The two floors of the structure contained nearly 8,000 total square feet, housing a dance hall, juke box theater, and retail space.",
+    "excerpt": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500.",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-39",
+    "slug": "stanleys-bar-tavern-lounge",
+    "institution_name": "Stanley's (Bar/Tavern/Lounge)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "Situated at the corner of Wylie and Fullerton, Stanley’s Inn occupied arguably the most prominent street corner in the Hill District, and one that had already proven a launching pad for another successful entrepreneur. “Lest you forget,” Courier columnist John Clark reminded readers in 1934, “Gus Greenlee made his first venture in this spot, having purchased a five-table poolroom from Mrs. William Johnson.”",
+    "excerpt": "Situated at the corner of Wylie and Fullerton, Stanley’s Inn occupied arguably the most prominent street corner in the Hill District, and one that had already proven a…",
+    "image_paths": [
+      "assets/images/stanleys-bar-tavern-lounge/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-40",
+    "slug": "blue-note-cafe",
+    "institution_name": "Blue Note Café",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The Blue Note Café was a historically significant, now-closed jazz venue in Pittsburgh, prominent during the 1930s–'50s, particularly within the segregated Lower Hill District. Known for hosting live bands with high energy, it served as a key fixture of the city's Black nightlife and the \"golden age of jazz\" era, often featuring a balcony overlooking the bar.",
+    "excerpt": "The Blue Note Café was a historically significant, now-closed jazz venue in Pittsburgh, prominent during the 1930s–'50s, particularly within the segregated Lower Hill…",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-41",
+    "slug": "washington-club",
+    "institution_name": "Washington Club",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "The historic Black social club scene in Pittsburgh, particularly during the early-to-mid 20th century, was centered around venues like the Crawford Grill in the Hill District. Founded by Gus Greenlee, these, along with places like Norris Beach, served as vital hubs for Black social life, jazz, and networking. The city's Black history is also deeply tied to abolitionists like the Vashon family and early",
+    "excerpt": "The historic Black social club scene in Pittsburgh, particularly during the early-to-mid 20th century, was centered around venues like the Crawford Grill in the Hill…",
+    "image_paths": [
+      "assets/images/washington-club/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-42",
+    "slug": "loendi-social-and-literary-club",
+    "institution_name": "Loendi Social and Literary Club",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/loendi-social-and-literary-club/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-43",
+    "slug": "hilltop-club",
+    "institution_name": "Hilltop Club",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/hilltop-club/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-44",
+    "slug": "crawford-grill-no-1",
+    "institution_name": "Crawford Grill No. 1",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "A key remnant of Pittsburgh’s 20th century musical culture, Crawford Grill was a landmark of Black entrepreneurship, inclusive atmosphere, and legendary jazz music.",
+    "excerpt": "A key remnant of Pittsburgh’s 20th century musical culture, Crawford Grill was a landmark of Black entrepreneurship, inclusive atmosphere, and legendary jazz music.",
+    "image_paths": [
+      "assets/images/crawford-grill-no-1/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-45",
+    "slug": "flamingo-hotel",
+    "institution_name": "Flamingo Hotel",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Hospitality / touring infrastructure",
+    "text": "",
+    "excerpt": "Narrative text pending from the project spreadsheet.",
+    "image_paths": [
+      "assets/images/flamingo-hotel/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "missing"
+  },
+  {
+    "id": "institution-46",
+    "slug": "hurricane-lounge",
+    "institution_name": "Hurricane Lounge",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "In the 1950s and '60s, the Hurricane served as an upscale jazz lounge that nurtured young musicians, a vision of its dynamic co-owner \"Birdie\" Dunlap.",
+    "excerpt": "In the 1950s and '60s, the Hurricane served as an upscale jazz lounge that nurtured young musicians, a vision of its dynamic co-owner \"Birdie\" Dunlap.",
+    "image_paths": [
+      "assets/images/hurricane-lounge/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-47",
+    "slug": "birdies-crib",
+    "institution_name": "Birdie's Crib",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "\"Birdie's Crib\" was a jazz club in Pittsburgh's Hill District operated by \"Birdie\" Dunlap prior to her opening the famous Hurricane Bar and Lounge on Centre Avenue in 1953. Birdie was a well-known figure in the local scene, managing the Hurricane with her husband, Shine, which was renowned for its tropical decor and live music. [1, 2, 3]",
+    "excerpt": "\"Birdie's Crib\" was a jazz club in Pittsburgh's Hill District operated by \"Birdie\" Dunlap prior to her opening the famous Hurricane Bar and Lounge on Centre Avenue in…",
+    "image_paths": [
+      "assets/images/birdies-crib/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-48",
+    "slug": "labor-temple",
+    "institution_name": "Labor Temple",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Labor / governance infrastructure",
+    "text": "A Labor Temple is a historic term for a building serving as a central hub, meeting hall, and office space for local labor unions and organized labor activities. Several locations exist, including a notable historic 1942 building in Seattle's Belltown, now a redeveloped cultural hub, a Canonsburg, PA location, and a historic union home in Pittsburgh",
+    "excerpt": "A Labor Temple is a historic term for a building serving as a central hub, meeting hall, and office space for local labor unions and organized labor activities.",
+    "image_paths": [
+      "assets/images/labor-temple/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-49",
+    "slug": "bambola-tia-juana-club-basement",
+    "institution_name": "Bambola / Tia Juana Club (basement)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Performance / nightlife venue",
+    "text": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500. The two floors of the structure contained nearly 8,000 total square feet, housing a dance hall, juke box theater, and retail space.",
+    "excerpt": "In 1914, brothers Thomas and Martin Burke built a two-story entertainment and retail complex at 53-55 Fullerton at a cost of $7500.",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-50",
+    "slug": "pittsburgh-courier-offices",
+    "institution_name": "Pittsburgh Courier (offices)",
+    "city": "Pittsburgh",
+    "corridor": "Hill District / Centre-Wylie corridor",
+    "layer": "Media / communication infrastructure",
+    "text": "The historic New Pittsburgh Courier newspaper, a prominent Black weekly, maintains an office located at 315 East Carson Street, Pittsburgh, PA 15219. Subscriptions and inquiries can be made by calling 412-481-8302 or emailing managing editor Rob Taylor Jr.. Historically, the paper operated from a location on Centre Avenue, with roots in the Hill District",
+    "excerpt": "The historic New Pittsburgh Courier newspaper, a prominent Black weekly, maintains an office located at 315 East Carson Street, Pittsburgh, PA 15219.",
+    "image_paths": [
+      "assets/images/pittsburgh-courier-offices/image-1.jpeg"
+    ],
+    "image_status": "available",
+    "text_status": "available"
+  },
+  {
+    "id": "institution-51",
+    "slug": "centre-street-after-hours-clubs-aggregate",
+    "institution_name": "Centre Street After-Hours Clubs (aggregate)",
+    "city": "Pittsburgh",
+    "corridor": "Centre Street / Strip District after-hours network",
+    "layer": "Performance / nightlife venue",
+    "text": "After-hours clubs in the Centre Street/Strip District area of Pittsburgh offer late-night dancing and entertainment, often operating well past 2 a.m. Notable spots include Hot Mass for electronic music, Club Pittsburgh, and Cavo Nightclub. These venues cater to the late-night crowd with pulsing music and high-energy atmospheres, generally packing in crowds after conventional bars close",
+    "excerpt": "After-hours clubs in the Centre Street/Strip District area of Pittsburgh offer late-night dancing and entertainment, often operating well past 2 a.m.",
+    "image_paths": [],
+    "image_status": "missing",
+    "text_status": "available"
+  }
+];

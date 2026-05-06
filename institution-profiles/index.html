@@ -1,0 +1,45 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Sanborn StoryMap · Black Cultural Institution Profiles</title>
+  <meta name="description" content="Institution profile story map for Buffalo and Pittsburgh Black cultural infrastructure." />
+  <link rel="stylesheet" href="assets/css/styles.css" />
+</head>
+<body>
+  <a class="skip" href="#cards">Skip to institution profiles</a>
+  <header class="hero">
+    <div>
+      <p class="kicker">Sanborn Research · StoryMap Profile Layer</p>
+      <h1>Black Cultural Institution Profiles</h1>
+      <p>Rock Hall–inspired profile cards for Buffalo and Pittsburgh institutions: a strong visual lead, profile facts, archive media, and the corresponding narrative text pulled from the provided spreadsheet.</p>
+      <div class="hero-actions">
+        <a class="button" href="#cards">View Profiles</a>
+        <a class="button" href="data/storymap_content_report.csv">Open QA Report</a>
+      </div>
+    </div>
+  </header>
+  <nav class="topbar" aria-label="StoryMap filters">
+    <div class="brand"><span id="count">Institution profiles</span> · <span id="missing">QA pending</span></div>
+    <div class="filters">
+      <button class="filter active" data-filter="All">All</button>
+      <button class="filter" data-filter="Buffalo">Buffalo</button>
+      <button class="filter" data-filter="Pittsburgh">Pittsburgh</button>
+      <button class="filter" data-filter="Pittsburgh region">Pittsburgh region</button>
+    </div>
+  </nav>
+  <main class="layout">
+    <aside class="toc" aria-label="Institution list">
+      <h2>Institutions</h2>
+      <div id="toc-links"></div>
+    </aside>
+    <section id="cards" class="cards" aria-label="Institution profile cards"></section>
+  </main>
+  <footer class="footer">
+    <p><strong>Build note:</strong> profile text comes from <code>StoryMap_Text_Photos.numbers</code>; images come from <code>StoryMap Photo Dump-2.zip</code>. Missing text/image rows are listed in <code>data/storymap_content_report.csv</code>.</p>
+  </footer>
+  <script src="assets/js/data.js"></script>
+  <script src="assets/js/app.js"></script>
+</body>
+</html>

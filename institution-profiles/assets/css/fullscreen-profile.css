@@ -1,0 +1,154 @@
+/* Fullscreen institution profile layout: image fills the slide, text sits in a bordered left panel. */
+.hero,
+.toc,
+.footer{
+  display:none;
+}
+
+.topbar{
+  position:sticky;
+  top:0;
+  z-index:50;
+  min-height:58px;
+  padding:.65rem clamp(1rem,3vw,3rem);
+  background:rgba(255,250,242,.92);
+  border-bottom:1px solid var(--line);
+}
+
+.layout{
+  display:block;
+  padding:0;
+}
+
+.cards{
+  display:block;
+  gap:0;
+}
+
+.profile-card{
+  min-height:calc(100vh - 58px);
+  border:0;
+  border-radius:0;
+  box-shadow:none;
+  background:#111;
+  overflow:hidden;
+}
+
+.profile-grid{
+  position:relative;
+  display:block;
+  min-height:calc(100vh - 58px);
+  width:100%;
+}
+
+.media-panel{
+  position:absolute;
+  inset:0;
+  z-index:1;
+  display:block;
+  min-height:100%;
+  padding:0;
+  background:#111;
+  overflow:hidden;
+}
+
+.media-panel img{
+  position:absolute;
+  inset:0;
+  width:100%;
+  height:100%;
+  display:block;
+  object-fit:cover;
+  object-position:center;
+  border-radius:0;
+  box-shadow:none;
+  background:#111;
+  filter:saturate(.98) contrast(1.04);
+}
+
+.media-panel::after{
+  display:none;
+}
+
+.placeholder{
+  min-height:100%;
+  border-radius:0;
+}
+
+.content-panel{
+  position:relative;
+  z-index:2;
+  width:min(390px,calc(100vw - 2rem));
+  min-height:calc(100vh - 98px);
+  margin:20px 0 20px clamp(1rem,4vw,3rem);
+  padding:clamp(1.25rem,2.4vw,2rem);
+  display:block;
+  overflow:auto;
+  background:rgba(255,250,242,.88);
+  border:2px solid #111;
+  border-radius:0;
+  box-shadow:0 24px 70px rgba(0,0,0,.18);
+  backdrop-filter:blur(10px);
+}
+
+.eyebrow{
+  margin:0 0 .8rem;
+  color:var(--accent);
+  font-size:.66rem;
+  letter-spacing:.16em;
+}
+
+.content-panel h2{
+  font-size:clamp(2.2rem,4vw,4.5rem);
+  line-height:.92;
+  margin:0 0 1rem;
+  letter-spacing:-.07em;
+}
+
+.dek{
+  font-size:1rem;
+  line-height:1.48;
+  margin-bottom:1rem;
+}
+
+.meta{
+  grid-template-columns:1fr;
+  gap:.45rem;
+  margin:1rem 0 1.2rem;
+}
+
+.meta div{
+  border-top:1.5px solid #111;
+  padding-top:.45rem;
+}
+
+.body-text{
+  font-size:.96rem;
+  line-height:1.58;
+  max-width:none;
+}
+
+.status-row{
+  margin-top:1rem;
+}
+
+@media(max-width:900px){
+  .profile-card,
+  .profile-grid{
+    min-height:auto;
+  }
+
+  .media-panel{
+    position:relative;
+    min-height:46vh;
+  }
+
+  .content-panel{
+    width:auto;
+    min-height:auto;
+    margin:0;
+    border-width:2px 0 0 0;
+    box-shadow:none;
+    background:var(--bone);
+  }
+}
